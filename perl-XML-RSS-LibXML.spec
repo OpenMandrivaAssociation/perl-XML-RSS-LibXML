@@ -1,6 +1,6 @@
 %define realname   XML-RSS-LibXML
 %define version    0.3004
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{realname}
 Version:    %{version}
