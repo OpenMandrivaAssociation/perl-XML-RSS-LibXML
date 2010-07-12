@@ -1,17 +1,16 @@
-%define realname   XML-RSS-LibXML
-%define version    0.3004
-%define release    %mkrel 2
+%define upstream_name    XML-RSS-LibXML
+%define upstream_version 0.3100
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Represent A Non-Trivial RSS Element
-Source:     http://www.cpan.org/modules/by-module/XML/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Class::Accessor::Fast)
 BuildRequires: perl(DateTime::Format::Mail)
 BuildRequires: perl(DateTime::Format::W3CDTF)
@@ -20,7 +19,9 @@ BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(UNIVERSAL::require)
 BuildRequires: perl(XML::LibXML)
 BuildRequires: perl(XML::LibXML::XPathContext)
+
 BuildArch: noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 XML::RSS::LibXML uses XML::LibXML (libxml2) for parsing RSS instead of
@@ -37,14 +38,14 @@ Use this module when you have severe performance requirements working with
 RSS files.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %buildroot
