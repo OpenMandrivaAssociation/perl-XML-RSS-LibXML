@@ -1,16 +1,15 @@
 %define upstream_name    XML-RSS-LibXML
-%define upstream_version 0.3101
-
+%define upstream_version 0.3102
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 0.3102
+Release:	1
 Epoch:		1
 
 Summary:	Represent A Non-Trivial RSS Element
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/XML/XML-RSS-LibXML-0.3102.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Class::Accessor::Fast)
@@ -78,5 +77,6 @@ perl Makefile.PL INSTALLDIRS=vendor
 * Thu Mar 05 2009 Michael Scherer <misc@mandriva.org> 0.3004-1mdv2009.1
 + Revision: 348894
 - import perl-XML-RSS-LibXML
+
 
 
