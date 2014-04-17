@@ -1,4 +1,5 @@
 removed_sources:
   XML-RSS-LibXML-0.3101.tar.gz: fbe8daa18c4e05b66f982f77bf07e359c912999a
-sources:
   XML-RSS-LibXML-0.3102.tar.gz: bc18a5df907f0b9bc726dae206be3bcb893b0eb0
+sources:
+  XML-RSS-LibXML-0.3104.tar.gz: 1c964acada4c2e72384b787b1c6438a38cf7951b
