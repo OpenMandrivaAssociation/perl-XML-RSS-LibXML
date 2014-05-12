@@ -1,11 +1,12 @@
 %define upstream_name    XML-RSS-LibXML
-%define upstream_version 0.3104
+%define upstream_version 0.3105
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
 Release:	1
 Epoch:		1
 
 Summary:	Represent A Non-Trivial RSS Element
+
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
@@ -56,5 +57,6 @@ perl Build.PL installdirs=vendor
 %doc Changes
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
+
 
 
