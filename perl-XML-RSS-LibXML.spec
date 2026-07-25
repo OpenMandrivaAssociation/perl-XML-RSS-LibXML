@@ -1,8 +1,8 @@
 %define upstream_name    XML-RSS-LibXML
 %define upstream_version 0.3105
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 Epoch:		1
 
 Summary:	Represent A Non-Trivial RSS Element
@@ -10,8 +10,8 @@ Summary:	Represent A Non-Trivial RSS Element
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/lestrrat/XML-RSS-LibXML
+Source0:	https://cpan.metacpan.org/authors/id/D/DM/DMAKI/XML-RSS-LibXML-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires: perl(Module::Build)
