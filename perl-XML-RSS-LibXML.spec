@@ -1,8 +1,7 @@
 %define upstream_name    XML-RSS-LibXML
-%define upstream_version 0.3105
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	4
+Version:	0.3105
+Release:	5
 Epoch:		1
 
 Summary:	Represent A Non-Trivial RSS Element
@@ -11,7 +10,7 @@ Summary:	Represent A Non-Trivial RSS Element
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/lestrrat/XML-RSS-LibXML
-Source0:	https://cpan.metacpan.org/authors/id/D/DM/DMAKI/XML-RSS-LibXML-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/D/DM/DMAKI/XML-RSS-LibXML-%{version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires: perl(Module::Build)
@@ -41,7 +40,7 @@ Use this module when you have severe performance requirements working with
 RSS files.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Build.PL installdirs=vendor
